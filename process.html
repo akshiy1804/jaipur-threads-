@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Process Explorer | Jaipur Textile Heritage</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+
+        body, html {
+            overflow: hidden; 
+        }
+        nav {
+            mix-blend-mode: exclusion;
+        }
+        .pattern-bg {
+
+            background-color: var(--color-offwhite);
+        }
+
+        #sec-bandhani .pattern-bg {
+            background: radial-gradient(circle, #4A55E2 10%, #2832C2 90%);
+        }
+        #sec-leheriya .pattern-bg {
+            background: repeating-linear-gradient(45deg, #800000, #800000 20px, #A52A2A 20px, #A52A2A 40px);
+        }
+        #sec-bagru .pattern-bg {
+            background: linear-gradient(135deg, #5C4033, #3E2723);
+        }
+        #sec-sanganeri .pattern-bg {
+            background: linear-gradient(135deg, #E2725B, #F4A460);
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">JAIPUR THREADS</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="process.html">Process</a></li>
+            <li><a href="timeline.html">Timeline</a></li>
+            <li><a href="design.html">Design Studio</a></li>
+        </ul>
+    </nav>
+
+    <div class="scroll-container" id="scrollContainer">
+
+        <section class="scroll-section" id="sec-bandhani">
+            <div class="pattern-bg"></div>
+            <div class="scroll-content">
+                <h2 style="font-size: 4rem; color: var(--color-indigo); margin-bottom: 1rem;">Bandhani</h2>
+                <p style="margin-bottom: 2.5rem; font-size: 1.2rem;">The intricate art of tying tiny knots to resist dye.</p>
+                <a href="textiles/bandhani.html" class="btn">Discover Bandhani</a>
+            </div>
+        </section>
+
+        <section class="scroll-section" id="sec-leheriya">
+            <div class="pattern-bg"></div>
+            <div class="scroll-content">
+                <h2 style="font-size: 4rem; color: var(--color-maroon); margin-bottom: 1rem;">Leheriya</h2>
+                <p style="margin-bottom: 2.5rem; font-size: 1.2rem;">Capturing the essence of monsoons and desert waves.</p>
+                <a href="textiles/leheriya.html" class="btn">Discover Leheriya</a>
+            </div>
+        </section>
+
+        <section class="scroll-section" id="sec-bagru">
+            <div class="pattern-bg"></div>
+            <div class="scroll-content">
+                <h2 style="font-size: 4rem; color: #5C4033; margin-bottom: 1rem;">Bagru Print</h2>
+                <p style="margin-bottom: 2.5rem; font-size: 1.2rem;">Mud-resist techniques and deep, earthy tones.</p>
+                <a href="textiles/bagru.html" class="btn">Discover Bagru</a>
+            </div>
+        </section>
+
+        <section class="scroll-section" id="sec-sanganeri">
+            <div class="pattern-bg"></div>
+            <div class="scroll-content">
+                <h2 style="font-size: 4rem; color: #E2725B; margin-bottom: 1rem;">Sanganeri Print</h2>
+                <p style="margin-bottom: 2.5rem; font-size: 1.2rem;">Delicate floral motifs stamped on pristine white cotton.</p>
+                <a href="textiles/sanganeri.html" class="btn">Discover Sanganeri</a>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+
+        const sections = document.querySelectorAll('.scroll-section');
+
+        const observerOptions = {
+            root: document.querySelector('.scroll-container'),
+            threshold: 0.6
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                } else {
+                    entry.target.classList.remove('active');
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(sec => observer.observe(sec));
+    </script>
+</body>
+</html>

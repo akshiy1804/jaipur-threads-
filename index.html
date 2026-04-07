@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaipur Textile Heritage | Experience Through Threads</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+
+        .default-bg-hero {
+            background: var(--color-theme-red);
+        }
+        .default-bg-bandhani {
+            background: radial-gradient(circle, #4A55E2 10%, #2832C2 90%);
+        }
+        .default-bg-leheriya {
+            background: repeating-linear-gradient(45deg, #800000, #800000 20px, #A52A2A 20px, #A52A2A 40px);
+        }
+        .default-bg-bagru {
+            background: linear-gradient(135deg, #5C4033, #3E2723);
+        }
+        .default-bg-sanganeri {
+            background: linear-gradient(135deg, #E2725B, #F4A460);
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">JAIPUR THREADS</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="process.html">Process</a></li>
+            <li><a href="timeline.html">Timeline</a></li>
+            <li><a href="design.html">Design Studio</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero default-bg-hero" id="hero">
+        <div class="hero-content">
+            <h1>Jaipur Textile Heritage</h1>
+            <p>Experience the Pink City through its timeless threads.</p>
+        </div>
+    </header>
+
+    <section class="section intro">
+        <h2>The Art of Patience</h2>
+        <p>For centuries, the artisans of Jaipur and its surrounding villages have woven stories through colors, blocks, and knots. These textiles are not merely fabrics; they are cultural archives of a vibrant desert civilization.</p>
+        <p>From the rhythmic thumping of wooden blocks in Bagru to the meticulous tying of minuscule dots in Bandhani, every piece of cloth is a testament to human hands and ancestral knowledge.</p>
+    </section>
+
+    <section class="section map-section">
+        <h2>The Craftsmen's Geography</h2>
+        <p style="margin-bottom: 3rem;">Hover over the regions to discover their distinct textile heritage.</p>
+
+        <div class="map-container" style="height: auto;">
+            <div class="map-image-container" style="position: relative; max-width: 800px; margin: 0 auto; display: inline-block;">
+                <img src="images/rajasthan_map.jpg" alt="Painted Textile Map of Rajasthan" style="width: 100%; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.15); display: block;">
+
+                <div class="map-point bagru" style="top: 63%; left: 60%;">
+                    <div class="map-tooltip">
+                        <strong class="tooltip-title">Bagru</strong>
+                        <span>Natural dye block printing</span>
+                    </div>
+                </div>
+
+                <div class="map-point sanganer" style="top: 45%; left: 25%;">
+                    <div class="map-tooltip">
+                        <strong class="tooltip-title">Sanganer</strong>
+                        <span>Delicate floral block prints</span>
+                    </div>
+                </div>
+
+                <div class="map-point jaipur" style="top: 47%; left: 53%;">
+                    <div class="map-tooltip">
+                        <strong class="tooltip-title">Jaipur</strong>
+                        <span>Bandhani and Leheriya tie-dye techniques</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 style="text-align: center; margin-bottom: 4rem; font-size: 3rem;">The Living Heritage</h2>
+        <div class="textile-preview">
+
+            <div class="card" onclick="window.location.href='textiles/bandhani.html'">
+                <div class="card-bg default-bg-bandhani" id="bg-bandhani" style="background-image: url('https://5.imimg.com/data5/ANDROID/Default/2023/9/344913660/AO/EX/VU/140227055/product-jpeg-500x500.jpg');"></div>
+                <div class="card-content">
+                    <h3>Bandhani</h3>
+                    <p>The art of tie and dye, creating myriad dotted patterns across vibrant silks and cottons.</p>
+                </div>
+            </div>
+
+            <div class="card" onclick="window.location.href='textiles/leheriya.html'">
+                <div class="card-bg default-bg-leheriya" id="bg-leheriya" style="background-image: url('https://fabricdekho.com/cdn/shop/files/FabricDekho32.jpg?v=1686909343');"></div>
+                <div class="card-content">
+                    <h3>Leheriya</h3>
+                    <p>Wave-like patterns symbolizing the joy of the monsoon and the flowing rivers.</p>
+                </div>
+            </div>
+
+            <div class="card" onclick="window.location.href='textiles/bagru.html'">
+                <div class="card-bg default-bg-bagru" id="bg-bagru" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_r9QIOYjNxE7uICYf4piAv1gA0959La0eHg&s');"></div>
+                <div class="card-content">
+                    <h3>Bagru Print</h3>
+                    <p>Earthy tones, natural dyes, and geometric floral motifs stamped with precision.</p>
+                </div>
+            </div>
+
+            <div class="card" onclick="window.location.href='textiles/sanganeri.html'">
+                <div class="card-bg default-bg-sanganeri" id="bg-sanganeri" style="background-image: url('https://itminan.in/cdn/shop/products/RUN-060-RP-2852_1d132249-a91d-412a-80f4-565e82f3e388.jpg?v=1663154607&width=1000');"></div>
+                <div class="card-content">
+                    <h3>Sanganeri Print</h3>
+                    <p>Fine detailing and vibrant colors on a pure white background, inspired by royal gardens.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

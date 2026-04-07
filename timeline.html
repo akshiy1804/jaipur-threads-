@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeline | Jaipur Textile Heritage</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body { background-color: var(--color-beige); }
+        nav { mix-blend-mode: exclusion; color: white; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">JAIPUR THREADS</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="process.html">Process</a></li>
+            <li><a href="timeline.html">Timeline</a></li>
+            <li><a href="design.html">Design Studio</a></li>
+        </ul>
+    </nav>
+
+    <header class="section" style="min-height: 50vh; text-align: center; padding-top: 150px; padding-bottom: 0;">
+        <h1 style="font-size: 4rem; color: var(--color-indigo); margin-bottom: 1.5rem;">Threads Through Time</h1>
+        <p style="font-size: 1.2rem; max-width: 600px; margin: 0 auto; line-height: 1.8;">Trace the evolution of Jaipur's textile heritage through centuries of artistry, invasions, trade, and innovation.</p>
+    </header>
+
+    <div class="timeline-container">
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3 style="color: var(--color-maroon); margin-bottom: 0.5rem; font-family: var(--font-secondary); font-size: 1.8rem;">Ancient Origins</h3>
+                <span style="font-size: 0.85rem; letter-spacing: 2px; color: #666; display: block; margin-bottom: 1.5rem; font-weight: 500;">PRE-12TH CENTURY</span>
+                <p>The earliest origins of resist dyeing and block printing trace back to the Indus Valley Civilization. Indigenous communities developed natural dyes using indigo, madder, and turmeric, establishing techniques that would survive millennia.</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3 style="color: var(--color-indigo); margin-bottom: 0.5rem; font-family: var(--font-secondary); font-size: 1.8rem;">Mughal Influence</h3>
+                <span style="font-size: 0.85rem; letter-spacing: 2px; color: #666; display: block; margin-bottom: 1.5rem; font-weight: 500;">16TH - 18TH CENTURY</span>
+                <p>Mughal patronage brought incredible refinement to local techniques. Persian motifs, complex floral patterns (butis), and precise geometric designs seamlessly merged with local craftsmanship, elevating block printing to an imperial art form highly sought after in royal courts.</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3 style="color: var(--color-maroon); margin-bottom: 0.5rem; font-family: var(--font-secondary); font-size: 1.8rem;">Colonial Period</h3>
+                <span style="font-size: 0.85rem; letter-spacing: 2px; color: #666; display: block; margin-bottom: 1.5rem; font-weight: 500;">19TH - MID 20TH CENTURY</span>
+                <p>The introduction of synthetic dyes and cheap, mill-made cloth severely threatened traditional crafts across India. However, the Swadeshi movement spurred a revival, emphasizing hand-spun Khadi and traditional block printing as acts of national resilience.</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3 style="color: var(--color-indigo); margin-bottom: 0.5rem; font-family: var(--font-secondary); font-size: 1.8rem;">Modern Era</h3>
+                <span style="font-size: 0.85rem; letter-spacing: 2px; color: #666; display: block; margin-bottom: 1.5rem; font-weight: 500;">LATE 20TH CENTURY - PRESENT</span>
+                <p>Jaipur textiles found a permanent place on the global runway. Artisans continue to innovate while fiercely preserving traditional techniques, balancing surging global commercial demand with sustainable, handmade, slow-fashion practices.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+
+        const timelineItems = document.querySelectorAll('.timeline-item');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.25 });
+
+        timelineItems.forEach(item => observer.observe(item));
+    </script>
+</body>
+</html>
